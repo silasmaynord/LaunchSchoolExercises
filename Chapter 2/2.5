@@ -1,0 +1,22 @@
+#Look at the following programs...
+
+x = 0
+3.times do
+  x += 1
+end
+puts x
+
+#and...
+
+y = 0
+3.times do
+  y += 1
+  x = y
+end
+puts x
+
+#The first program performs without error.
+#x will equal 1 + 1 + 1, or 3. 
+#In the second program, the variable x has not
+#been previously defined, and an error is 
+#shown.
