@@ -1,0 +1,6 @@
+p {backgroud: orange; font-size: 24px}
+/* If we set the background to a defferent color
+it will override the previous setting */
+p {background: green;}
+/* The same is true for properties inside selectors */
+p {background: orange; background: green;}

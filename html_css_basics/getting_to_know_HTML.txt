@@ -1,0 +1,154 @@
+GETTING TO KNOW HTML
+
+SEMANTICS
+Semantics is the process of giving content 
+meaning and structure by using the proper element. 
+
+
+EXCEPTION TO SEMANTICS
+<div> and <span> are used specifically 
+to target styles into specific sets of content in html, 
+and have no semantic value
+
+
+COMMENTS
+html comments start with <!-- and end with --> 
+css comments start with /* and end with */
+
+
+HEADINGS 
+<h1> through <h6> are block-level elements 
+used to break up content and establish heirarchy. 
+Example: <h1>Title goes here...</h1> 
+
+
+PARAGRAPHS 
+<p> is a black-level element that often follow headings. 
+Example: <p>Paragraph goes here...</p>
+
+
+BOLD TEXT WITH STRONG 
+<strong> and <b> are used to bold text as inline-level elements. 
+The difference between the two is that <strong> gives importance 
+to bolding text, whereas <b> semantically means giving text a 
+stylistic offset. 
+Examples: 
+<!-- Strong importance -->
+<p><strong>Caution:</strong> Falling rocks.</p>
+
+<!-- Stylistically offset -->
+<p>This recipe calls for <b>bacon</b> and <b>baconnaise</b>.</p>
+
+
+ITALICIZE
+<em> and <i> are used to italicize text as inline-level elements. 
+The difference here is that <em> places stressed emphasis on text, 
+whereas <i> is used semantically to convey text as alternative voice or tone. 
+Example: 
+<!-- Stressed emphasis -->
+<p>I <em>love</em> Chicago!</p>
+
+<!-- Alternative voice or tone -->
+<p>The name <i>Shay</i> means a gift.</p>
+
+
+BUILDING STRUCTURE
+<header>, <nav>, <article>, <aside>, and <footer> 
+are all structure-based elements used to divide 
+content up on a webpage. 
+	
+	HEADER 
+	<header> is used to identify the "top"
+	Example: <header>...</header>
+	
+	NAVIGATION
+	<nav> identifies a section of major navigational links on a page. 
+	Example: <nav>...</nav> 
+
+	ARTICLE
+	<article> is used to identify independent, self-contained content. 
+	The content in <article> should be ready for replication elsewhere 
+	without confusion. <artcicle>...</article> 
+
+	SECTION 
+	<section> is used to identify thematic grouping of content. 
+	Used commonly to break up and provide heirarchy to a page. 
+ 	<section>...</section> 
+
+	ASIDE
+	<aside> holds content tangentially related to the content surrounding it. 
+	<aside>...</aside> 
+
+	FOOTER
+	<footer> identfies the "end" 
+
+IN PRACTICE	
+Example 1:
+<header>
+  <h1>Styles Conference</h1>
+  <h3>August 24&ndash;26th &mdash; Chicago, IL</h3>
+</header>
+
+Example 2: 
+<section>
+  <h2>Dedicated to the Craft of Building Websites</h2>
+  <p>Every year the brightest web designers and front-end developers 
+  descend on Chicago to discuss the latest technologies. Join us this August!</p>
+</section>
+
+Example 3: 
+<section>
+  <section>
+    <h5>Speakers</h5>
+    <h3>World-Class Speakers</h3>
+    <p>Joining us from all around the world are over twenty fantastic speakers, 
+    here to share their stories.</p>
+  </section>
+  ...
+</section>
+
+Example 4: 
+<footer>
+  <small>&copy; Styles Conference</small>
+</footer>
+
+
+CREATING HYPERLINKS 
+<a> is an inline-level element that anchors hyperlinks in a webpage. 
+To link one webpage to another, a hyperlink reference (href) is used. 
+The href value identifies the destination of the link. 
+Example: <a href="http://shayhowe.com">Shay</a>
+
+If the hyperlink links to a another page within the website, 
+no domain is given (relative path). If, however, the hyperlink directs the user 
+away from the website, the full (or absolute) path is needed. 
+Examples:
+<!-- Relative Path -->
+<a href="about.html">About</a>
+
+<!-- Absolute Path -->
+<a href="http://www.google.com/">Google</a>
+
+LINKING TO AN EMAIL ADDRESS
+Email links are created by starting the href with mailto:, followed by 
+the email address: mailto:contact@website.com 
+To add a subject link, follow this with a '?' to bind the 'subject=' to the hyperlink path, spaces are encoded with %20, and line breaks with %0A.
+Example: 
+<a href="mailto:shay@awesome.com?subject=Reaching%20Out&body=How%20are%20you">Email Me</a>
+
+LINKING TO PARTS OF THE SAME PAGE
+'id=...' and '#...' are used to hyperlink sections on the same page. 
+Example: 
+<body id="top">
+  ...
+  <a href="#top">Back to top</a>
+  ...
+</body>
+
+
+
+
+
+
+	
+	
