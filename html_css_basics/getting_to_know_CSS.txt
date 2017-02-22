@@ -1,0 +1,93 @@
+CALCULATING SPECIFICITY 
+Every selector in CSS has a specific weight. This weight defines how it will be rendered. 
+As previously mentioned in "Build Your First WebPage" 
+we talked about three different types of selectors: 
+type, class, and ID, each of which has a specific weight.
+The type selector have the lowest specificity weight, 
+holding a point value of 0-0-1. 
+The class selector has a medium value at 0-1-0
+And the ID selector has a high specificity weight at 1-0-0
+Each number represents a column, counting ID, class, and type selectors. 
+In terms of specificity weight: ID > class > type
+
+COMBINING SELECTORS
+When selectors are combined, they should be read from right to left. The selector to the farthest right is known as the "key selector", becuase it identifies which element the styles will be applied to. Selectors to the left of the key selector serve as prequalifiers. 
+
+SPECIFICITY WITHIN COMBINED SELECTORS
+Combining the weights of the slectors from the previous exercise, we get: 
+.hotdog p (0-1-1)
+.hotdog p.mustard (0-2-1)
+Becuase the weight of the second example is higher than the first,
+it will take precedence over the first example. 
+The higher that the specificity weights rise, the more likely 
+the cascade is of breaking. 
+
+LAYERING STYLES WITH MULTIPLE CLASSES
+Sharing similar styles from element to element is one way to keep 
+specificity weights low. 
+Example: 
+.btn {font-size: 16px;}
+.btn-danger {background: red;}
+.btn-success {background: green;}
+
+COMMON CSS PROPERTY VALUES 
+  COLORS 
+  All colors are defined on red-green-blue color space.
+  We can define color using four primary examples: 
+  Keywords, Hexadecimal notation, and RBG(scale 255) and HSL values 
+    
+    KEYWORD COLORS 
+    These keywords map to most common colors. 
+
+    HEXADECIMAL COLORS
+    These values consist of a hash, followed by a three or six 
+    character figure, using 0-9 and a-f (16 options)
+    Characters in six-notaion are double their 3-character notation 
+    if they are repeats. 
+    Example: R- ff  G- 66  B- 00
+             R- f   G- 6   B- 0 
+    These characters are obtained by converting 
+    0-255 into a hexadecimal format (base-16), 
+    16.7 million different colors can be generated. 
+
+    RGB COLOR
+    RGB colors are stated using the function rgb(r,g,b)
+    each color value is on a 0-255 scale. 
+    
+    ALPHA TRANSPARENCY (RGBa)
+    A value of 0 creates a fully transparent color. 
+    A value of 1 creates a fully opaque color. 
+    Decimal values between 0 and 1 create semi-transparent color.
+
+    HSL & HSLa COLORS
+    HSL color values are stated using the function hsl(H,%S,%L)
+    Hue (h) is the color, and is on a scale of 0-360, or 
+    the color wheel. 
+    Saturation (%S) and Lightness (%L) are on a percentage scale. 
+    Saturation identifying the intensity of the color, 
+    and light identifying how dark or light the hue value is. 
+    To add alpha (transparency), a fourth value is added between 0 and 1
+    to the HSLa funciton hsla(H,%S,%L,a) 
+
+LENGTHS
+Length values come in two forms: absolute and relative. 
+Each form uses a different unit of measurement. 
+  
+  ABSOLUTE LENGTHS
+  Absolute lengths are fixed units of measurement.
+  The most popular absolute unit of measurement is the pixel, represented by 'px'
+  which is equal to 1/96th of an inch. With the changing landscape of viewing
+  devices, pixels have lost popularity, but they do remain trustworthy.  
+  
+  RELATIVE LENGTHS
+  Unlike absolute lengths, relative lengths are relative units of measurement 
+  relying on the length of another measurement. 
+    
+    PERCENTAGES
+    Percentages are one of the most popular relative values. 
+    Percent length is based on parent length. 
+
+    EM 
+    A single em unit is equivalent to an element's font size. 
+    When no explicit font size is given, the em is based on the closest 
+    parent element with a stated font size. 
