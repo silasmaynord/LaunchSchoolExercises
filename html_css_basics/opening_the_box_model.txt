@@ -1,0 +1,127 @@
+HOW ARE ELEMENTS DISPLAYED?
+To recap, block-level elements occupy any available width,
+regardless of content, beginning on a new line. 
+Inline-level elements occupy only the width that their content requires, lining up one after the other. 
+Block-level elements are generally used for large pieces of content. 
+Inline-level elements are generally used for smaller pieces of content. 
+
+DISPLAY
+Exactly how elements are displayed is determined by the display 
+property. Every element has a default display value. 
+The most common display property values are: 
+block, inline, inline-block, and none. 
+We can target a CSS selector's display property value using 
+"display: " 
+  
+  BLOCK 
+  Makes the element behave like a block-level element. 
+  
+  INLINE
+  Makes the element behave like an inline-level element. 
+  
+  INLINE-BLOCK
+  The element behaves like a block-level element, but 
+  is displayed in line with other elements. 
+  
+  NONE
+  The element will not be rendered on the webpage. 
+
+WHAT IS THE BOX MODEL? 
+Every element on a page is a rectangular box having: 
+width, height, padding, borders, and margins. 
+
+WORKING WITH THE BOX MODEL
+These properties of boxes are represented as values which can 
+be changed using CSS selectors.
+
+This formula is used to calculate the total width of an element: 
+margin-right + border-right + padding-right + width + padding-left + border-left + margin-left
+
+This formula may calculate total height: 
+margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom
+
+The width property value is added to each side, left and right. 
+The height property value is added to the top and bottom. 
+
+WIDTH & HEIGHT 
+Every element has a default width and height value. 
+If an element is parent to other elements on the page, 
+or is key to the overall layout of the page, it may require 
+spsecific width and height values. 
+ 
+  WIDTH 
+  Block-level elements have a difault width of 100% 
+  Inline-level elements cannot have a fixed size, thus 
+  width and height are irrelevant. 
+  
+  HEIGHT
+  Default height is determined by content. An element
+  will expand and contract vertically to accomidate its content.
+
+MARGIN & PADDING 
+Depending on the element, broswers may default the values of margins and padding in order to accomidate for legibility and clarity. These defaults may change depending on the browser and element. It may be helpful to use a CSS Reset. 
+  
+  MARGIN
+  This property allows us to set the amount of space surrounding an element (left and right only). 
+  
+  PADDING
+  This property is similar to margin, but it falls inside of an elements border (all four sides of the element).  
+  The padding property works vertically on inline-level elements, unlike the margin property.  
+
+  MARGIN & PADDING DECLARATION
+  You can write out the longhand or shorthand property values 
+  of an element in a CSS selector. 
+  Using longhanded properties and values offers higher clarity and transparency compared to shorthand.  
+
+BORDERS
+Borders fall between padding and margins, outlining an element. 
+Borders require three values: width, style, and color. 
+In longhand, these can be broken up into border-width, border-style, and border-color. 
+The width and color of borders uses common CSS units of length and color. 
+Borders can have different appearances. The most common styles are: solid, double, dotted, and none. 
+  
+  INDIVIDUAL BORDER SIDES
+  Just like margin and padding, borders can be placed on one side of an element at a time. 
+
+  BORDER RADIUS
+  This property enables us to round the corners of an element. 
+  The "border-radius" property accepts percentages or pixels. A single value will round all four corners equally. Two values will round top-left/bottom-right and top-right/bottom-left. Four values will round the top-left, top-right, bottom-right, bottom-left (x-y quadrants 1,2,3, and 4)
+
+  The border-radius property may be broken down just like margins and padding. 
+
+BOX SIZING
+Up until now the box model is an additive design such that you add the width of the element, along with padding and borders along each side. 
+This model may, however, be changed to support different calculations. CSS3 introduced the box-sizing property, allowing you to change exactly how the box model is calculated as well as how it works. The property accepts three values in CSS: 
+content-box, padding-box, and border-box
+
+  CONTENT BOX
+  This is the default value, leaving the box model as "additive"
+  If the "box-sizing" property isn't used, this will be the default property for all elements. Size of an element begins with "width" and "height" properties, and any "padding, border, or margin" property values are added from there. 
+
+  PADDING BOX 
+  This value alters the box model by including padding property values within the width and height of an element. Therefor as padding values increase, content size decreases. 
+
+  BORDER BOX
+  This value alters the box model by including border or padding property values within the width and height of an element. 
+
+  PICKING A BOX SIZE 
+  The best box-sizing value to use is border-box. This value makes math much easier by adding padding and border values to a constant height and width. 
+  The box-sizing property isn't supported in every browser, lacking support in older browsers especially, but this problem is becoming less relevant over time. 
+
+DEVELOPER TOOLS 
+Developer tools allow us to inspect elements on a webpage, showing where the elements live within the html document, as well as any CSS properties and values associated with those elements.  
+
+IN PRACTICE
+1. adjust box size using "border-box" in the .css file. Add grid comment section. Then use the universal selector "*", along with universal pseudo elements "*:before" and "*:after". Include the necessary vendor prefixes for "box-sizing". 
+
+2. Create ".container" class, which will then be used on elements to create a common width, center the elements, and apply horizontal padding. 
+
+3. Apply the "container" class to "header" and "footer"
+
+4. Apply the same class to "section", and consequently "h1"
+
+5. Create vertical spacing between elements. 
+
+6. Create class .btn, .btn-alt and create borders with rounded edges, as well as color and padding in the .btn-alt class. 
+
+7. This is the "homepage", add padding to the section containing the hyperlink using a new class .hero. 

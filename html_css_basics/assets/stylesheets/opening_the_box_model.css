@@ -1,0 +1,129 @@
+/* A value of "block" will make that element block-level */ 
+p {
+  display: block;
+}
+/* "inline" will make the element an inline-level element */ 
+p {
+  display: inline;
+}
+/* "inline-block" allows an element to behave like a 
+block-level element, accepting all box model properties, but 
+it will be displayed inline with other elements, 
+/*not beginning on a new line. */
+p {
+  display: inline-block;
+}
+/* "none" will completely hide the element from the webpage. */
+div {
+  display: none;
+}
+/* Here is an example of a box model's property values */ 
+div {
+  border: 6px solid #949599;
+  height: 100px;
+  margin: 20px;
+  padding: 20px;
+  width: 400px;
+}
+/* Example of shorthand "margin" (all four sides) */ 
+div {
+  margin: 20px;
+}
+/* Example of a longhand "margin" (top/bottom, left/right) */ 
+div {
+  margin: 10px 20px;
+}
+/* Going into even more detail of "margin"(top,right,bottom,left) */ 
+div {
+  margin: 10px 20px 0 15px;
+}
+/*Setting property values for specific sides of the box */ 
+div {
+  margin-top: 10px;
+  padding-left: 6px;
+}
+/*Here is the code for a 6-pixel-wide, solid, 
+gray border that wraps around all four sides of a <div>: */ 
+div {
+  border: 6px solid #949599;
+}
+/* The same can be done for individual sides */ 
+div {
+  border-bottom: 6px solid #949599;
+}
+/* These can be controlled at an even finer level */ 
+div {
+  border-bottom-width: 12px;
+}
+/* These are examples of border radius */ 
+.border-rounded {
+  border-radius: 5px;
+}
+.border-circle {
+  border-radius: 50%;
+}
+.border-football {
+  border-radius: 15px 75px;
+}
+div {
+  border-top-right-radius: 5px;
+}
+
+
+/* IN PRACTICE */
+
+/* 
+  =================
+  Grid
+  =================
+*/ 
+
+*, 
+*:before, 
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; 
+}
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 960px;
+}
+
+/* 
+  =================
+  Typography
+  =================
+*/ 
+
+h1, h3, h4, h5, p {
+  margin-bottom: 22px;
+}
+
+/* 
+  =================
+  Buttons 
+  =================
+*/ 
+
+.btn {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0;
+}
+.btn-alt {
+  border: 1px solid #dfe2e5;
+  padding: 10px 30px;
+}
+
+/* 
+  ==================
+  Home
+  ==================
+*/ 
+
+.hero {
+  padding: 22px 80px 66px 80px;
+}
