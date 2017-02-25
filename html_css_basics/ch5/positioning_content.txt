@@ -1,0 +1,103 @@
+CSS gives us the ability to position content and elements on a page in almost any imaginable way. Adding structure and digestability. 
+
+There are different types of positioning in CSS. Each has its own application. 
+
+POSITIONING WITH FLOATS
+The "float" property can be used to take an element and position it to the left or right of its parent element. All other elements will flow around the floated element. 
+Example: an <img> element floating around a few paragraphs of text. 
+"Float" accepts a few values; common values are "left" and "right" 
+
+FLOATS MAY CHANGE AN ELEMENT'S DISPLAY VALUE
+Floated elements are removed from normal flow. FLoat elements are changed into block-level if they weren't block-level previously. This affects inline-level elements, which ignore height and width property values.
+
+CLEARING & CONTAINING FLOATS
+Float was originally intended to allow content to wrap around images. Because of this, it's use comes with a few pitfalls. 
+
+Proper styles will not render on an element sitting next to, or is, a parent element of a floated element. 
+
+Margin and padding values are often times interpreted incorrectly, blending them into the floated element. 
+
+Sometimes unwanted content wraps around a floated element. 
+
+To solve this, we can either clear or contain a floated element. This enables a page to flow normally. 
+
+  CLEARING FLOATS 
+  The "clear" property has two common values: 
+  left, right, and both
+
+  Left clears left floats, right clears right floats, and both clears both left and right floats. 
+
+  You use this property on elements that are affected by overlap. 
+
+  CONTAINING FLOATS 
+  Containing floated elements ensures that styles will be rendered properly. 
+  To contain a float, the element mus reside in a parent. That parent will act as a container, leaving the flow of the document completely normal outside of it. 
+
+  Essentially, floats are being cleared from within their parent elements based on class-level selection.
+
+  ":before" and ":after" are "table-level" elements, or pseudo-elements placed in front of a class "group". Each of these clears floats in front of or after the group. 
+
+  "clear: both" is known as a clearfix, and can be found on other webpages with the class name clearfix or cf, which would replace the class "group" in this example. 
+
+POSITIONING WITH INLINE-BLOCK
+The "display" property and "inline-block" value can be used to position content as well. 
+
+The "inline-block" value displays elements within a line, while also accepting box model properties. This allows you to take advanage of the box model without worry of clearing floats. 
+
+  INLINE-BLOCK IN PRACTICE
+  Taking a look at the three block example from before, start with keeping html the same. 
+
+  Changing the section elements to an "inline-block" value leaves the margin and width property values alone. 
+
+  This change alters the positioning of the final section, forcing it to be rendered in the next line. The white space needs to be removed from between each section so that all section elements render on the same line. 
+
+  To do this, we start each section immediately after the end of the previous section with no spaces between closing and starting tags. We can make this look more clean by adding a comment rather than making each closing and starting tag sit next to each other directly. 
+
+CREATING REUSABLE LAYOUTS
+It's important to conserve styles that can be reused elsewhere, and layouts is one of the styles that can be reused. These can be created using floats or inline-block elements. 
+
+The approach taken in this lesson is to use inline-block elements to create the grid, and then use floats to wrap content around a given element. Inline-block elements are generally easier to work with as well. 
+
+"flex-" and "grid-" based properties are currently in the works to help address how to best lay out pages. Watch for these methods as they will soon surface. 
+
+  IN PRACTICE
+  For the example website, a three-column reusable layout will be made using the inline-block element. The layout will either have three columns of equal width or two columns with the width split between them, two-thirds in one and one-third in the other. 
+
+  Create classes for column width sizes of 1/3 and 2/3. 
+  
+  Add a selector for both classes that makes their display values inline-block, and their vertical-alignment value top.
+
+  Add spaces between each columns with padding on the left and right. Use the class name ".grid" to identify the grid. 
+
+  Create a .container class and set the class, as well as .grid to a margin of 0 auto and width of 960px. Next set the .container to 30px padding on the left and right. 
+
+  Using class="" set each section to the corresponding class. Add comments between the closing and opening tags, so that there isn't any excess white space. 
+
+UNIQUELY POSITIONING ELEMENTS
+In order to precisely position an element, we cannot use a float or inline-block element. Instead, a "position" property is used alongside a connection with box offset properties. 
+
+"position" identifies how an element is positioned on a page and whether or not it will appear within the normal flow of a document, and is used in conjunction with box offset properties (top, right, bottom, left) that identify where elements are positioned by moving elements in different directions. 
+
+By default, position values of elements are static, existing in normal flow, not accepting any box offset properties. Static values are overwritten with a relative or absolute value. 
+
+  RELATIVE POSITIONING
+  "relative" value for the position property allows elements to appear in the normal flow of a page, leaving space for an element as intended while not allowing other elements to flow around it. It also allows display position to be modified with the box offset properties. 
+
+  In the example given, the second div element with a class of offset has a position value of relative and two box offset properties, left and top, preserving the original position of the element, keeping other elements from moving into its space. boxoffset properties also reposition the element pushing it 20px from the left and 20px from the top of its original location. 
+
+  Using the boxoffset prop. the element overlaps the element below it rather than moving that element down as the margin or padding prop. would. 
+
+  ABSOLUTE POSITIONING
+  "absolute" value for the position prop. is different from the relative value in that an element with a position value of abosolute does not appear in normal flow. The original space and position will not be preserved. 
+
+  Absolutely positioned elements are moved in relation to their closest relatively positioned parent element. Should that parent element not exist, it will be positioned in relation to the body element. 
+
+  In the exmaple given, the section is relatively positioned but does not include box offset prop. Consequencely the position does not change. The div has a class offset position value of absolute, and because the section element is the closest relatively positioned parent element, the div will be positioned in relation to the section. 
+
+  The box offset properties id in which direction an element would be moved in relation to itself. With absolutely positioned elements, the box offset prop. id direction in relation to the closest parent element. 
+
+  As a result of right and top box offset prop. the div will appear 20px from the right and 20px form the top of section. 
+
+  Because the div is abs. positioned, it does nto sit within the normal flow, overlaping surrounding elements. Additionally, original position of the div is not preserved and other elements are able to occupy that space. 
+
+  Most positioning does not require the positioning and box offset prop. but in certain cases they can be helpful. 

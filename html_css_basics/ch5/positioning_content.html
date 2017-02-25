@@ -1,0 +1,169 @@
+<!-- Layout without Floats Demo -->
+<header>
+  <code>&#60;header&#62;</code>
+</header>
+
+<section>
+  <code>&#60;section&#62; <br> float: left;</code>
+</section>
+
+<aside>
+  <code>&#60;aside&#62; <br> float: right;</code>
+</aside>
+
+<footer>
+  <code>&#60;footer&#62;</code>
+</footer>
+
+<!-- Three-column Layout Demo --> 
+<header>
+  <code>&#60;header&#62;</code>
+</header>
+
+<section>
+  <code>&#60;section&#62; <br> float: left;</code>
+</section>
+
+<section>
+  <code>&#60;section&#62; <br> float: left;</code>
+</section>
+
+<section>
+  <code>&#60;section&#62; <br> float: left;</code>
+</section>
+
+<footer>
+  <code>&#60;footer&#62;</code>
+</footer>
+
+<!-- Two-column page layout containment example --> 
+<header>...</header>
+<div class="group">
+  <section>...</section>
+  <aside>...</aside>
+</div>
+<footer>...</footer>
+
+<!-- Layout with Contained Floats Demo -->
+<header>
+  <code>&#60;header&#62;</code>
+</header>
+
+<div class="group">
+  
+  <code class="default">&#60;section="group"&#62;</code>
+  
+  <section>
+    <code>&#60;section&#62; <br> float: left;</code>
+  </section>
+
+  <aside>
+    <code>&#60;aside&#62; <br> float: right;</code>
+  </aside>
+
+</div>
+  
+<footer>
+  <code>&#60;footer&#62; <br> clear: both;</code>
+</footer>
+
+<!-- IN PRACTICE -->
+<h1 class="logo">
+  <a href="index.html">Styles <br> Conference</a>
+</h1>
+
+<header class="container group">
+  ...
+</header>
+
+<footer class="primary-footer container group">
+  ...
+</footer>
+
+
+<!-- Inline-Block in Practice --> 
+<header>...</header>
+<section>...</section>
+<section>...</section>
+<section>...</section>
+<footer>...</footer>
+
+<!-- To remove unwanted spaces between sections, take each section's closing tag and place it before the section ahead of it. --> 
+<header>...</header>
+<section>
+  ...
+</section><section>
+  ...
+</section><section>
+  ...
+</section>
+<footer>...</footer>
+
+<!-- Another way to remove white space is to place comments immeditately after each section like so --> 
+<header>...</header>
+<section>
+  ...
+</section><!--
+--><section>
+  ...
+</section><!--
+--><section>
+  ...
+ </section>
+ <footer>...</footer>
+
+<!-- After the creation of different classes, this is how they 
+are set up in html. -->
+<section class="grid">
+  ...
+</section>
+
+<!-- Withing the class grid, add three sections of 1/3 size columns --> 
+<section class="grid">
+
+  <section class="col-1-3">
+    ...
+  </section>
+
+  <section class="col-1-3">
+    ...
+  </section>
+  
+  <section class="col-1-3">
+    ...
+  </section>
+
+</section>
+
+<!-- Remove empty white space between the inline-block element columns. These can be used to identify each column section --> 
+<section class="grid">
+  
+  <!-- Speakers -->
+  
+  <section class="col-1-3">
+    ...
+  </section><!--
+  
+  Schedule
+  
+  --><section class="col-1-3">
+    ...
+  </section><!--
+  
+  Venue
+  
+  --><section class="col-1-3">
+    ...
+  </section>
+
+</section>
+
+<!-- Relative Positioning Example --> 
+<div>...</div>
+<div class="offset">...</div>
+<div>...</div>
+
+<!-- Absolute Positioning Example --> 
+<section>
+  <div class="offset">...</div>
+</section>
