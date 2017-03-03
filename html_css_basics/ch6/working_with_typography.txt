@@ -1,0 +1,157 @@
+Typography on the web has risen because of a couple different reasons, one of which is a system for embeding web fonts on a website. 
+
+This lesson is about the application of typefaces (fonts) to webpages using HTML and CSS 
+
+ADDING COLOR TO TEXT
+One of the first decisions of a webpage is the primary typeface and text color. 
+
+The "color" prop. is used to set text color. Color values can be found using Adobe Hexadecimal Color Wheel. 
+
+CHANGING FONT PROPERTIES
+CSS offers prop. to change the look and feel of text. Prop. fit into two different categories: font-based and text-based. 
+
+  FONT FAMILY 
+  'font-family' prop. declares which fonts should be used to display text. Values of font-family contain multiple font names, all comma separated. 
+
+  The first declared font, is the primary font. Should this font not be available, other alternative fonts are declared in order of preference from left to right. 
+
+  Font names with more than one word should be wrapped in quotes. 
+
+  FONT SIZE 
+  'font-size' provides the ability to set the size of text using common length values or keywords. 
+
+  FONT STYLE
+  'font-style' is used to change, or prevent text from becoming italicized. there are four values for this prop.: 
+  normal, italic, oblique, and inherit
+
+  FONT VARIANT
+  'font-variant' is used when text needs to be set in small capitals, or small caps. there are three values: 
+  normal, small-caps, and inherit
+
+  FONT WEIGHT
+  'font-weight' accepts either keyword or numeric values. 
+
+  Values include: normal, bold, bolder, lighter, and inherit. 
+  Of these keyword values, normal and bold are recommended, along with numeric values for more specific control. 
+
+  Font-weight numeric values of 100,200,300,...900 pertain to to typefaces with multiple weights, the thinnest being 100 and the thickest being 900. Normal keyword maps to 400 and bold maps to 700. 
+
+  Some typefaces only have certain weights. Weight numerics given will default to the closest available. 
+
+  LINE HEIGHT
+  'line-height' is the distance between two lines of text. 
+
+  For legibiliy, line height should be set to a value of about 150% or 1.5. line-height can also be set using pixels as a unit of measurement. 
+
+  SHORTHAND FONT PROPERTIES
+  All font-based properties can be combined into one font shorthand value. The order of property values is as follows: 
+  style, variant, weight, size, height, family 
+
+  Prop. values are listed left to right with no commas wit hthe exception of family names. '/' is used to separate size and line-height values. 
+
+  When using the shorthand prop., every value is optional except size and family. 
+
+  FONT PROPERTIES ALL TOGETHER 
+  This section is about using all font-based properties together. 
+
+  IN PRACTICE 
+  1 & 2. apply custom font and line-height styles to the body element of the .css flle
+
+  3. add unique style values to h5 
+
+  4. adjust values for strong, cite, and em 
+
+  5. add values to Links section, as well as a value for the pseudo-class ":hover"
+
+  6. adjust .logo values accordingly 
+
+  7. add a margin to h3 within the header to balance it using "tagline" as the class name and assigning margin values to the class accordingly
+  
+  8.  add class "primary-nav" to the nav, adding size and weight to the new class as well. 
+
+  9. use "primary-footer" to adjust color, font size, and add padding to the top and bottom. Increase the weight of the small primary-footer class to 400. 
+
+  10. Update the homepage starting with the hero class section, increasing height and size of classes within. 
+
+  11. Lastly, the color we have given links when users hover over them has been overridden by the colors in both h3 and h5, using a lsightly more complicated selector, this is fixed. A class attribute value of teaser is added to all three columns of the homepage, and the class is then used to style the h3 element. 
+
+APPLYING TEXT PROPERTIES 
+We can decide how to align, decorate, indent, transform, and space text. 
+
+  TEXT ALIGN 
+  'text-align' has five values:
+  left, right, center, justify, and inherit
+
+  This is different from the 'float' prop. because align is within an element, whereas float moves an entire element. 
+
+  TEXT DECORATION
+  'text-decoration' provides ways to spruce up text. It accepts values: 
+  none, underline, overline, line-through, and inherit
+
+  multiple values can be applied to one element by separating each keyword with a space. 
+
+  TEXT INDENT
+  'text-indent' is used to indent the first line of text within an element. common length values are available for this prop. positive values of length will indent text inward, negative- outward 
+
+  TEXT SHADOW
+  'text-shadow' adds shadow or multiple shadows to text. the prop. ususally takes four values. The first three are lengths, and the last is a color. 
+
+  The first length determines shadow horizontal offset, the second - vertical offset, and the last determines shadow blur radius. 
+
+  Negative lengths for horiz. and vert. offsets move shadows left and to the top. 
+
+  multiple shadows can be chained using comma separated values, allowing the shadows to be placed about and below the text, or any other variation. 
+
+  TEXT TRANSFORM 
+  'text-transform' changes text inline without the need for an alternate typeface. It accepts five values: 
+  none, capitalize, uppercase, lowercase, and inherit. 
+
+  LETTER SPACING
+  'letter-spacing' adjusts space between letters on a page. Positive length values push letters away from one another, while negative values pull letters closer together. keyword value 'none' returns letter-spacing back to normal. 
+
+  using relative length values rather than absolue helps ensure correct spacing between letters as font-size is changed. 
+
+  WORD SPACING
+  'word-spacing' adjust space between words on a page, accept the same length values as the 'letter-spacing' prop. 
+
+  TEXT PROP. ALL TOGETHER
+  HTML and CSS example of everything covered so far. 
+
+  IN PRACTICE
+  This is the application of everything learned so far put into the example webpage. 
+
+USING WEB-SAFE FONTS 
+Some fonts are generically installed into every electronic device capable of reading text on a screen. The safest being: 
+Arial; Courier New, Courier; Garamond; Georgia; Lucida Sans, Lucida Grande, Lucida; Palatino Linotype; Tahoma; Times New Roman, Times; Trebuchet; Verdana
+
+EMBEDDING WEB FONTS 
+fonts can be uploaded to a server via the CSS @font-face at-rule. 
+
+@font-face at-rule identifies font name using font-family, as well as the source of the font (path to the font file) via src prop. We can then use this font by including its name within any font-family prop. value. 
+
+  IN PRACTICE
+  This is the application of everything learned so far put into the example webpage.
+
+INCLUDING CITATIONS AND QUOTES 
+Citation and Quote cases are covered semantically in html using <cite>, <q>, and 
+<blockquote> elements: 
+  <cite>: Used to reference a creative work, author, or resource
+  <q>: Used for short, inline quotations
+  <blockquote>: Used for longer external quotations
+
+  CITING A CREATIVE WORK 
+  <cite> is used to cite creative work. The element must include either the work title, author, or url reference to the work. Content wrapped within the <cite> will appear in italics within the browser. 
+
+  it helps to include a hyperlink to the original source of the citation. 
+
+  DIALOGUE AND PROSE CITATION
+  Often times, dialogue or prose is quoted inline with other text. For this, <q> is used. The browser will insert proper quotation marks. 
+
+  cite attribute can be included in <q> acting as a citation reference to the quote in the form of a url. It is useful to provide a hyperlink to the source next to the actual quotation. 
+
+  EXTERNAL QUOTATION 
+  Use <blockquote> to quote a large block of text. This may comprise the cite attribute as well as the <cite> element. 
+
+  The cite element can fall after the quote itself, including the url, to specify to original source of the quote. 
+
+

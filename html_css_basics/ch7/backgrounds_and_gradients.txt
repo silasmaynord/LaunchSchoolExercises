@@ -1,0 +1,113 @@
+Backgrounds establish groupings, assign priority, having considerable influence on website usability. 
+
+Element backgrounds can be a solid color, an image, a gradient, or a combination of these. Keep in mind that every background contributes to the overall appearance of the website. 
+
+This lesson is about assigning backgrounds and gradients to elements, as well as CSS3 properties specific to backgrounds. 
+
+ADDING A BACKGROUND COLOR
+'background' or 'background-color' properties are used to add a background to an element. 'background' accepts colors and images in shorthand, while 'background-color' is used strictly to set solid background color. 
+  
+  TRANSPARENT BACKGROUNDS
+  Some websites do not recognize RGBa or HSLa values, so it is best to provide a fallbaack color. In practice, the first color will be the fallback in the CSS cascade, the second will be the prefered background color. 
+
+ADDING A BACKGROUND IMAGE 
+'background' or 'background-image' can be used, the value of which is 'url(image path)'
+
+'background-repeat' and 'background-position' prop. control how or whether the image repeats
+
+  BACKGROUND REPEAT
+  background images will repeat indefinitely by default, both vertically and horizontally. 
+  'background-repeat' can change the direction in which a background image is repeated, if repeated at all. it accepts four values: 
+  repeat, repeat-x, repeat-y, and no-repeat
+
+  BACKGROUND POSITION 
+  By default, background images are postioned in the top left corner of an element. By using 'background-position', the background can be placed relative to that corner. 
+
+  This prop. requires a horizontal and vertical offset value.  If only one value is specified, h. and v. offset will default to 50%. 
+
+  to set background position, values, keywords, pixels, percentages, or any length measurement can be used. keywords are: 
+  top, right, bottom, left, and center
+  left top would be the same value as 0 0, because of it's relative position to the top left corner. 100% 0 -> right top; 0 100% -> left bottom; 100% 100% -> right bottom
+
+  SHORTHAND BACKGROUND IMAGE VALUES 
+  'background-color,-image,-position, and repeat' prop. may be shorthand written into a single value, commonly following in the same order. 
+
+  BACKGROUND IMAGE EXAMPLE 
+  In the example, the shorthand background image values are set to 20px from the left and a 50% vertical center. a few other prop. are added to the .notice-success class
+
+  IN PRACTICE
+  This is the example exercise for the Styles Conference website. 
+
+DESIGNING GRADIENT BACKGROUNDS 
+Gradient backgrounds were introduced with CSS3, and are supported in modern browsers. 
+
+  LINEAR GRADIENT BACKGROUND
+  These can be specified within CSS, by giving the two colors to be blended. 
+
+  'linear-gradient(x,y)' is used to specify linear gradients within the 'background' or 'background-image' prop. the first color is the beginning and the second is the ending.
+
+  a fall back solid color value should be placed beforehand should the browser not recognize the linear-gradient prop. 
+
+  CHANGING THE DIRECTION OF A GRADIENT BACKGROUND
+  Linear gradients move from top to bottom by default, but the direction of gradient can be changed with the use of keywords or a degree value stated before any colors. 
+
+  When a diagonal gradient is used on an element that isn't exactly square, the gradient does not proceed directly from one corner to another. The gradient will identify the absolute center of the element, then identify corners perpendicular to that point, then move to the general area of the corner stated within the value. These areas are called "magic corners" and are not absolute. 
+
+  Degrees are also acceptable, and are on a 0 to 360 degree scale
+
+  RADIAL GRADIENT BACKGROUND 
+  'radial-gradient' is used in the 'background' or 'background-image' prop. and is used the same way that linear gradient is. 
+
+  radial gradients work inside to outside, the first color sitting in the absolute center, and the second sitting on the outermost edge. 
+
+  The difference between radial and linear gradients is that radial gradients can become quite complex. 
+
+  GRADIENT COLOR STOPS 
+  multiple colors can be added to a gradient. to do this, add color stops to the given gradient with commas separating each color. 
+
+  by default, color stops are positioned at equal distances from the next, but locations along the gradient can be identified for each color stop. declarations should be a length value falling after the color value. 
+
+  by default, first color stops will be positioned at 0% and last color stops will be positioned at 100% 
+
+  GRADIENT BACKGROUND EXAMPLE 
+  when making a gradient, always give a fallback solid color value. 
+
+USING MULTIPLE BACKGROUND IMAGES 
+With CSS3, you can use more than one image in the background of an element by comma separating values within a background or background-image prop. 
+
+The image value that comes first will be the foremost background image, the last being the rearmost. images inbetween will reside in the middle ground accordingly. 
+
+  MULTIPLE BACKGROUND IMAGES EXAMPLE 
+  In the example given, an image file is paired with a linear gradient, separated by commas. 
+
+EXPLORING NEW BACKGROUND PROPERTIES 
+CSS3 introduces three new properties: 
+background-size, background-clip, and background-origin
+
+  CSS3 BACKGROUND SIZE
+  'background-size' allows you to specify the size of a background image. The property accepts lengths as well as keyword values. 
+
+  When using length values, you can specify via two space-separated values, the first being the width and the second being the height. pecentage values are in relation to the elements size, not the background image's original size. 
+
+  If one value is given, the height value will automatically set to preserve the aspect ratio of the original image. 
+
+  The keyword 'auto' may be used as either width or height to preserve the aspect ratio of the background image. 
+
+  COVER AND CONTAIN KEYWORD VALUES 
+  In addition to length, there is also 'cover' and 'contain' keyword values for 'background-size'
+
+  'cover' will resize the image to completely cover the element's width and height. the original aspect ratio will be preserved, but the image will be stretched or shrunk as necessary. 
+
+  'contain' will resize the image to reside entirely contained within the element's width and height. To contrast, the 'contain' keyword will always show the full background image, whereas the 'cover' keyword does not. often times, however, it will not occupy the full available space of the element. 
+
+  both these keywords will possibly result in distorted background images. 
+
+  CSS3 BACKGROUND CLIP & BACKGROUND ORIGIN
+  'background-clip' specifies the surface area an image will cover, and 'background-origin' specifies where the '-position' should originate. There are three keywords: 
+  border-box, padding-box, and content-box
+
+  border-box extends the background into the border of the element. 
+
+  padding-box extends the background into the padding of the element. 
+
+  content-box contains the background within the border and padding of an element. 
