@@ -1,0 +1,89 @@
+When making a list, HTML provides three different types to choose from: 
+unordered, ordered, and discription 
+
+There are different ways to style these lists using CSS as well, such as the marker used, which can be square, round, numeric, alphabetical, or nonexistent 
+
+UNORDERED LISTS
+A list of related items whose order does not matter. The format in HTML is 
+<ul> with individual list elements <li> 
+
+ORDERED LISTS
+'<ol>' is used for ordered lists with <li> as the list element. In an ordered list, the order of items is important 
+
+  START ATTRIBUTE
+  'start' defines the number from which an ordered list starts. By deafult, ordered lists start at 1. There may be cases where lists should start at 30 or another number. The start attribute only accepts integer values. 
+
+  REVERSED ATRIBUTE 
+  'reversed' switches the order of the list, decending rather than accending. 'reversed' is a boolean atribute, not accepting any value. it is either true or false. false is the default value. 
+
+  VALUE ATTRIBUTE
+  'value' can be used on a list element (<li>) to recalculate the order number on the list element, and all subsequent list elements. 
+
+DESCRIPTION LISTS
+'<dl>'s are used to outline multiple terms and their descriptions, as in a glossary. 
+
+<dl>s require two block level elements: 
+description term (<dt>) and description element (<dd>) 
+
+dt must come before dd
+
+by default, dl will include vertical margins, just like ul and ol
+the dd element includes a left margin by default 
+
+NESTING LISTS
+Lists can be nested, but should only be nested where they hold the highest semantic value. 
+
+the only direct child of the ul and ol elements is li. once inside the li, standard sets of elements may be added (ul or ol)
+
+LIST ITEM STYLING 
+'list-style-type' is a the list styling prop. available values range from squares and decimal numbers to armenian numbering. the style may be placed on ul, ol, or li elements within CSS. 
+  
+  LIST STYLE TYPE VALUES 
+  none                      No list item
+  disc                      A filled circle
+  circle                    A hollow circle
+  square                    A filled square
+  decimal                   Decimal numbers
+  decimal-leading-zero      Decimal numbers padded by initial zeros
+  lower-roman               Lowercase roman numerals
+  upper-roman               Uppercase roman numerals
+  lower-greek               Lowercase classical Greek
+  lower-alpha / lower-latin Lowercase ASCII letters
+  upper-alpha / upper-latin Uppercase ASCII letters
+  armenian                  Traditional Armenian numbering
+  georgian                  Traditional Georgian numbering
+
+  USING AN IMAGE AS A LIST ITEM MARKER
+  If list-syle-type prop. values are not enough, images can be used instead. 
+
+  LIST STYLE POSITION PROP. 
+  The default position of the marker is to the left of the content within the <li> element. This is described as 'outside'. There are two other positions: 
+  'inside' and 'inherit' 
+
+  'inside' places the marker in line with the first line of the <li> element, and allows other content to wrap below it as needed. 
+
+  SHORTHAND LIST STYLE PROP. 
+  'list-style-type' and 'list-style-position' can be consolidated into the prop. 'list-style', separated by a single space- type followed by position.
+
+HORIZONTALLY DISPLAYED LIST
+To display a list horizontally rather than vertically, the display prop. value can be changed to inline, inline-block, or by floating them 
+
+  DISPLAY LIST
+  the quickest way to display lists horizontally is to use the display prop. value inline or inline-block. Doing so will place all elements within a single line, with a single space between each list item. 
+
+  spaces between each <li> element may be removed similarly to the techniques from lesson 5. 
+
+  When changing the display prop. to inline or inline-block, the markers are removed. 
+
+  FLOATING LIST 
+  In order to keep the markers, each li element can float.
+
+  by setting all li element's float prop. to 'left' will horizontally align li elements directly next to each other without any space between them. To add space between each li element, horizontal margin or padding should be added. 
+
+  because floats break the flow of the page, they must be cleared, most commonly with the clearfix technique, returning the page to its normal flow. 
+
+  NAVIGATIONAL LIST EXAMPLE 
+  Navigation menus are often developed using unordered lists, often laid out horizontally. 
+
+  IN PRACTICE 
+  This is the Styles Conference example webpage. 

@@ -1,0 +1,131 @@
+INITIALIZING A FORM
+<form> is used to add a form to a page. This element identifies where on the page control elements will appear, and will wrap all of the elements included within the form, much like a <div> element. 
+
+The most common attributes added to <form> are 'action' and 'method'. 
+'action' contains the URL to which information included will be sent for processing by the server. 'method' is the HTTP method browsers should use to submit the form data. 
+
+TEXT FIELDS AND TEXTAREAS 
+Text fields and text areas are elements for obtaining data within forms. This may include text, passwords, numbers, and other info. 
+
+  TEXT FIELDS
+  <input> is one of the primary elements used to obtain text from users. the 'type' attribute is used to define the type of information being gathered. along with 'type' it is also advised to use the 'name' attribute as well, which adds a name of the control to be submitted along with the input data. 
+
+  <input> is self-contained, using only one tag and not wrapping any other content. 
+  HTML5 input types: 
+  color
+  date
+  datetime
+  email
+  month
+  number
+  range
+  search
+  tel
+  time
+  url
+  week
+
+  TEXTAREA
+  <textarea> is used to capture text-based data. It differs from input because it can accept larger passages of text spanning multiple lines. It also has start and end tags that can wrap plain text. 'name' can still be used as an attribute. 
+
+  <textarea> has two sizing attributes: 'cols' for width and 'rows' for height, but 'height' and 'width' may still be used in CSS 
+
+MULTIPLE CHOICE INPUTS AND MENUS 
+  RADIO BUTTIONS 
+  radio buttons allow users to select one option only, as opposed to multiple options. 
+
+  To create a radio button, <input> is used with a type attribute value of radio. Each radio button element should have to same 'name' attribute value so that all of the buttons within a group correspond to one another. 
+
+  With radio buttons, the user is making a multiple choice selection. Using the value attrubute, specific values can be set for each <input> element
+
+  CHECK BOXES
+  <checkbox> works just like <radio> does, except it allows users to select multiple values rather than just one. 
+
+  DROP-DOWN LISTS
+  Drop-down lists provide the perfect format for a long list of choices. 
+
+  To create a drop-down list, <select> and <option> are used. <select> wraps all of the menu options, each menu option is then marked up using the <option> element. 
+
+  'name' resides on <select>, and 'value' resides on <option> elements nested within <select>. The value attribute on each <option> then corresponds to the name attribute on <select> 
+
+  Each <option> wraps the text of an individual option within the list. 
+
+  MULTIPLE SELECTIONS 
+  boolean attribute 'multiple', when added to <select>, allows the user to add more than one option from the list at a time. using 'selected' boolean on more than one <option> will preselect mulitple options 
+
+  the size of <select> can be controlled using CSS
+
+FORM BUTTONS 
+  SUBMIT INPUT
+  User clicks the submit button after filling out a form. The submit button is created using <input> with a 'type' attribute value of 'submit' 
+
+  SUBMIT BUTTON 
+  as an <input>, the submit button is self-contained and cannot wrap any other content. If more control over structure and design is desired, <button> may be used. 
+
+  <button> performs like <input>, but it includes opening and closing tags which may wrap other elements. by deafult <button> has a 'type' value of 'submit', so this may be omitted if you wish. 
+
+  rather than using 'value' attribute to control text within the submit button, text between the opening and closing tags will appear. 
+
+OTHER INPUTS 
+  HIDDEN INPUTS 
+  hidden inputs provide a way to pass data to the server without displaying it to users. These are typically used to track codes, keys, or other information not pertinent to the user but helpful in form processing. It should not contain sensitive or secure information. 
+
+  'hidden' is used to as a value for the 'type' attribute. include 'name' and 'value' attribute values should also be included. 
+
+  FILE INPUT 
+  'file' value for attribute 'type' is used to allow users to add a file to a form
+
+  styling <input>s with a 'type' attribute value of 'file' is hard to style in CSS. Javascript can be employed to allow for file input, but are slightly more difficult to construct. 
+
+ORGANIZING FORM ELEMENTS
+Labels, fieldsets, and legends can be used to better organize forms and guide users on how to complete them. 
+
+  LABEL
+  <label> is used to provide captions or headings for form controls. 
+
+  <label> may include a 'for' attribute, with a value that should be the same as 'id'. matching these values up ties the two elements together, allowing users to click on the <label> element to bring focus to the proper form control. 
+
+  <label> can also wrap form controls, such as radio buttons or check boxes. Doing so allows omission of 'for' and 'id' attributes. 
+
+  FIELDSET
+  '<fieldset>' is a block-level element that wraps related elements specifically withing a <form> for better organization. By default, fieldsets include a border outline, which can be modified using CSS. 
+
+  LEGEND
+  <legend> provides a caption or heading for the <fieldset> element. On the page, the legend will appear within the top left part of the fieldset border
+
+FORM AND INPUT ATTRIBUTES
+  DISABLED
+  'disabled' boolean attribute turns off an element or control so that it is not available for interaction or input. Elements disabled do not send any values to the server for form processing. 
+
+  Applying 'disabled' to <fieldset> will disable all form controls within the fieldset. If 'type' has a 'hidden' value, 'hidden' is ignored. 
+
+  PLACEHOLDER
+  'placeholder' attribute provides hints or tips within the form control of <input> or 
+  <textarea> that disappears once the control is clicked in or gains focus. This gives users further information on how the form input should be filled in. 
+
+  the difference between 'placeholder' and 'value' is that 'value' text stays in place when a control has focus unless a user manually deletes it. 
+
+  REQUIRED
+  'required' enforces that an element or form control must contain a value upon being submitted to the server. Should an element or form control not have a value, an error message will be displayed requesting that the user complete the required field. 
+
+  Error messages cannot currently be styled using css because they are controlled by the broswer. Invalid elements and form controls can be styled, however, using :optional and :required CSS pseudo-classes. 
+
+  Validation also occurs specific to a control's type. An <input> element with a 'type' attribute of email will require that a value exists within the control, and also that it is a valid email address. 
+
+  ADDITIONAL ATTRIBUTES 
+  accept
+  autocomplete
+  autofocus
+  formaction
+  formenctype
+  formmethod
+  formnovalidate
+  formtarget
+  max
+  maxlength
+  min
+  pattern
+  readonly
+  selectionDirection
+  step
+

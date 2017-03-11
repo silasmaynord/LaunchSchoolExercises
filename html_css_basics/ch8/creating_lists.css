@@ -1,0 +1,86 @@
+/* List Styling Example */ 
+ul {
+  list-style-type: square;
+}
+
+/* Image List Styling Example */ 
+li {
+  background: url("arrow.png") 0 50% no-repeat;
+  list-style-type: none;
+  padding-left: 12px;
+}
+
+/* List Style Position Example */ 
+ul {
+  list-style-position: inside;
+}
+
+/* Displaying List Horizontally Example */ 
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Floating List Example */ 
+li {
+  float: left;
+  margin: 0 20px;
+}
+
+/* Navigational List Example */ 
+.navigation ul {
+  font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.navigation li {
+  display: inline-block;
+}
+.navigation a {
+  background: #395870;
+  background: linear-gradient(#49708f, #293f50);
+  border-right: 1px solid rgba(0, 0, 0, .3);
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+.navigation a:hover {
+  background: #314b60;
+  box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+.navigation li:first-child a {
+  border-radius: 4px 0 0 4px;
+}
+.navigation li:last-child a {
+  border-right: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* In Practice */ 
+.nav li {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: top;
+}
+.nav li:last-child {
+  margin-right: 0;
+}
+
+/*
+  ========================================
+  Speakers
+  ========================================
+*/
+  
+.speaker-info {
+  border: 1px solid #dfe2e5;
+  border-radius: 5px;
+  margin-top: 88px;
+  padding: 22px 0;
+  text-align: center;
+}
+
+.speaker {
+  margin-bottom: 44px;
+}

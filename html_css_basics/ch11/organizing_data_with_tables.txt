@@ -1,0 +1,8 @@
+CREATING A TABLE
+At a minimum, a table must contain <table> as well as <tr>(table row) and <td>(table data) elements. Tables may optionally include <th>, or table header, and a few other elements as well. 
+
+  TABLE
+  <table> is used to initialize a table on a page. Using this element signifies that the information within will be tabular data displayed in columns and rows. 
+
+  TABLE ROW
+  

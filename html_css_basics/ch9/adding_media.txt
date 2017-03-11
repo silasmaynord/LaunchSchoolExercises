@@ -1,0 +1,104 @@
+ADDING IMAGES 
+'<img>' is an inline element that is self-containing, or empty. It does not wrap any other content and it exists as a single tag. For this element to work, a 'src' attribute and value must be included indicating the source of the image. 
+
+'alt' attribute describes the contents of an image, and should be applied as well. 
+
+The most commonly supported image files are: 
+gif, jpg, and png. 
+jpg is for quality images with high color counts, while maintaining decent file size. Ideal for load timing. 
+png is great for images with transparencies or low color counts "cut outs" 
+
+  SIZING IMAGES 
+  'height' and 'width' can be used on img classes in html. This is important if the size of the image should remain static. 
+
+  'height' and 'width' can be used directly in the img tagline, but may also be found in CSS. If both are used, the css prop. take precedence over html. 
+
+  specifying height or width will cause the other dimension to adjust automatically to maintain aspect ratio of the image. setting both will work, however doing so may cause the image to appear distorted. 
+
+  POSITIONING IMAGES 
+  By default, images are positioned as inline-level elements. their positions may be changed using css, specifically float, display, and box model properties including padding, border, and margin. 
+
+  INLINE POSITIONING IMAGES 
+  'img' element by default is inline-level. Adding an image without styles to a page will position it within the same line as the content surrounding it. The height of the line will change to match the height of the image, creating large vertical gaps. 
+
+  Typically, images are floated or displayed as block-level elements to avoid this problem. 
+
+  BLOCK POSITIONING IMAGES
+  Use the 'display' prop. and 'block' value forces the image to be block-level, making the image appear on its own line. 
+
+  POSITIONING IMAGES FLUSH LEFT OR RIGHT
+  when positioning images inline or block isn't enough, the image may be floated to the left or right of its containing element. 
+
+  To proide spacing, the margin prop. is used. padding, border, and background may also be used to build a frame around the image. 
+
+  IN PRACTICE 
+  This section is about the Styles Conference example website. 
+
+ADDING AUDIO 
+<audio> may also be added, including both opening and closing tags. 
+
+  AUDIO ATTRIBUTES 
+  Several other attributes may accompany the src attribute including: 
+  autoplay, controls, loop, and preload
+
+  autoplay, controls, and loop are boolean, and do not require a stated value. 
+
+  by default <audio> isnt displayed on a page. if the 'autoplay' boolean is present, the audio will automatically play upon loading 
+
+  'controls' displays the browser's default audio controls 
+
+  'loop' causes an audio file to repeat continually 
+
+  'preload' identifies what information about the audio file should load before the clip is played. this attribute has three values: 
+  none, auto, and metadata 
+
+  'none' will not preload any information
+  'auto' will preload all information
+  'metadata' will preload any meta data about an audio file 
+
+  AUDIO FALLBACKS AND MULTIPLE SOURCES 
+  Because different browsers support different audio file types, fallbacks are needed. 
+
+  start my removing the src attribute from the audio element. instead, use the source element with an src attribute
+
+  using source and the src attribute for each file format, each may be listed one after the other. 
+
+ADDING VIDEO
+Adding <video> is similar to adding <audio> in that it has all of the same attributes and fallbacks as audio. 
+
+With audio, if the controls boolean isn't specified, the audio clip isn't displayed, but with video, if controls isn't specified, the video will display. 
+
+height and width  for video can also be specified just as images can be, and may be set to properly display the video to avoid distortion
+
+  CUSTOMIZING AUDIO AND VIDEO CONTROLS 
+  A customized player can be built, but it will require JavaScript to work. 
+
+  If a customized player uses the <img> element as a control, the value of hte alt attribute 
+
+  POSTER ATTRIBUTE 
+  the poster of a video is the image that is shown before a video is played
+
+  VIDEO FALLBACKS 
+  Just like audio, video fallbacks are necessary if the video file is not supported by certain broswer. And, just like the audio, the source element and src's of each video file, are nested within the video element. 
+
+  Another fallback option is a link to a youtube or other hosted video file. 
+
+ADDING INLINE FRAMES 
+Another way to add content is to embed another HTML page within the current page. This is called the '<iframe>' element, which accepts the URL of another HTML page within the src attribute value. 
+
+Many pages use <iframe> to embed other websites such as google maps, youtube, and others. 
+
+<iframe> has default styles: border, width, height which can be adjusted using the HTML attributes frameborder, width, and height or the CSS border, width, and height. 
+
+IN PRACTICE 
+This section is about the Styles Conference example website. 
+
+SEMANTICALLY INDENTIFYING FIGURES AND CAPTIONS 
+<figure> is a block-level element used to identify and wrap self-contained content, often in the form of media, and different types of media. 
+
+  FIGURE CAPTION
+  '<figcaption>' is nested within the <figure> and is used to add a caption or legend the the figure. 
+
+  <figcaption> also replaces an <img> element's alt attribute by providing a useful description. 
+
+  Only media that are self-contained and belong together should be included within a figure element. 
