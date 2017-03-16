@@ -5,4 +5,32 @@ At a minimum, a table must contain <table> as well as <tr>(table row) and <td>(t
   <table> is used to initialize a table on a page. Using this element signifies that the information within will be tabular data displayed in columns and rows. 
 
   TABLE ROW
-  
+  <tr> is a row within a <table> 
+
+  TABLE DATA
+  <td> is a data cell. Listing multiple <td>s one after the other will create columns within a table row. 
+
+  TABLE HEADER
+  <th> is a heading for a column or row. Just like <td>, <th> creates a cell for data. The difference is that <th> provides semantic value by signifying that data within the cell is a heading, while <td> only represents generic pieces of data. 
+
+  The difference between <th> and <td> is also similar to the difference between <h#> elements and <p> elements. Using a heading adds more semantic value to the content. The same is true for table headers. 
+
+  The data determines the appropriateness of the headers.'scope' indicatese with values col, row, colgroup, and rowgroup whether a table header applies to a row or column. Most common values are col and row. col indicates that every cell within that column relates directly to that table header, and the same is true for row. 
+
+  Using <th> and 'scope' helps users make sense of a table. 
+
+  Table headers, depending on the browser, may receive default styling, typically bold and centered. 
+
+TABLE STRUCTURE
+Elements <caption>, <thread>, <tbody>, and <tfoot> help organize data and structure of a table. 
+
+  TABLE CAPTION
+  <caption> provides captions or titles for a table. <caption> comes immediately after the opening 
+  <table> tag, and is positioned at the top of a table by default. 
+
+  TABLE HEAD, BODY, AND FOOT
+  <thead>, <tbody>, and <tfoot> elements help stucturally organize tables. 
+
+  <thead> wraps heading row ot rows to denote the head. <thead> should be placed before <tbody> and after <caption>. 
+
+  After 
