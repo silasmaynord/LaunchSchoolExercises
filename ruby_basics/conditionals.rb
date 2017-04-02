@@ -1,5 +1,5 @@
 #Unpredictable Weather (Part 1)
-sun = ['variable', 'hidden'].sample 
+sun = ['visible', 'hidden'].sample 
 
 if sun == 'visible'
   puts "The sun is so bright"
