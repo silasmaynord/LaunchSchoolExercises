@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Shutter Bug</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        background: #d2dcbf;
+        color: #3e606f;
+        font-family: Roboto Condensed;
+        min-width: 900px;
+      }
+      header div {
+        display: inline-block;
+        height: 100%;
+        width: 50%;
+      }
+      header div img {
+        position: relative;
+        top: 0px;
+        left: 50px;
+      }
+      header div text {
+      font-size: 36px;
+      font-family: Roboto Condensed;
+      position: relative;
+      top: -25px;
+      left: 50px;
+      }
+      header nav {
+        font-size: 20px;
+        width: 450px;
+        float: right;
+        position: absolute;
+        top: 75px;
+        right: 40px;
+      }
+      header a {
+        display: inline-block;
+        color: #98b0a3;
+        text-decoration: none;
+        text-align: center;
+        background: #fcfff5;
+        padding: 8px;
+        width: 90px;
+        border-radius: 8px 8px 0 0;
+      }
+      header::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      
+      main {
+        background: #fcfff5;
+        width: 95%;
+        position: relative;
+        right: -2.5%;
+        border: linear-gradient(#fbfef4, #b5b5b5) /* Should possibly be separate img */
+
+      }
+      main section {
+        width: inherit;
+        position: relative;
+        right: inherit;
+      }
+      main > img {
+        width: inherit;
+        position: relative;
+        right: inherit;
+      }
+      main h1 {
+        font-size: 30px
+      }
+      main #content p {
+        display: inline-block;
+        float: left;
+        width: 67%;
+      }
+      main #content img {
+        display: inline-block;
+        float: right;
+        position: relative;
+        top: -96px;
+        width: 33%;
+      }
+      main #content::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      footer {
+        position: relative;
+        right: -25px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="logo.png" alt="Shutter Bug Logo">
+        <text>Shutter Bug</text>
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <img src="marsh.jpeg" alt="Photo of marshland">
+
+      <section id="welcome">
+        <h1>Welcome to Shutter Bug</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet nisl vel eros semper maximus at in quam. Suspendisse ac lectus ac eros pulvinar finibus luctus sed magna. Duis eleifend placerat metus, sed malesuada ipsum rhoncus viverra. Donec vel ullamcorper lorem. Integer accumsan mauris vel ex porttitor, et pharetra nisi finibus. Vestibulum vitae sagittis risus. Fusce ornare tempor purus eget blandit. Quisque eu erat non odio lobortis sollicitudin ultrices nec arcu. Pellentesque eget iaculis purus. Morbi ac libero egestas, maximus ex id, mattis arcu. Praesent tincidunt justo non luctus dapibus.</p>
+      </section>
+
+      <section id="content">
+        <p>Pellentesque vel congue dolor. Aenean varius lectus massa, ac pharetra sapien egestas sit amet. Maecenas non ipsum convallis, vestibulum augue eget, molestie urna. Donec a mauris pretium, eleifend felis eu, dapibus mi. Nunc vel imperdiet arcu. Morbi hendrerit rhoncus eleifend. Nullam sodales tincidunt consequat. Maecenas ut laoreet dui, et hendrerit nisi.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet nisl vel eros semper maximus at in quam. Suspendisse ac lectus ac eros pulvinar finibus luctus sed magna. Duis eleifend placerat metus, sed malesuada ipsum rhoncus viverra. Donec vel ullamcorper lorem. Integer accumsan mauris vel ex porttitor, et pharetra nisi finibus. Vestibulum vitae sagittis risus. Fusce ornare tempor purus eget blandit. Quisque eu erat non odio lobortis sollicitudin ultrices nec arcu. Pellentesque eget iaculis purus. Morbi ac libero egestas, maximus ex id, mattis arcu. Praesent tincidunt justo non luctus dapibus.</p>
+
+        <img src="ocean.jpeg" alt="Photo of shoreline and tree">
+      </section>
+    </main>
+
+    <footer>
+      <small>&copy; Shutter Bug</small>
+    </footer>
+  </body>
+</html> 
