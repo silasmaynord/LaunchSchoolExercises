@@ -1,0 +1,124 @@
+@import "whitespace-reset.css";
+
+body {
+  font: normal 16px Helvetica, Arial, sans-serif;
+  color: #282828;
+}
+
+h1 {
+  padding-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+
+h2 {
+  padding-bottom: 1.2rem;
+  font-size: 1.25rem;
+}
+
+form {
+  max-width: 37.5rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+}
+
+fieldset {
+  padding: 1.5rem 2rem;
+  margin-bottom: 2px;
+  border-left: 4px solid #cccccc;
+  background: #ececec;
+}
+
+label {
+  display: block;
+  padding-bottom: .62rem;
+  font-weight: bold;
+  color: #666666;
+}
+
+label.checkbox {
+  position: relative;
+  padding: 0 0 1.5rem 1.25rem;
+  font-size: .875rem;
+  font-weight: normal;
+}
+
+label.checkbox input {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+h2 label {
+  padding-bottom: 0;
+  color: inherit;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  height: 2.5rem;
+  padding: .31rem .5rem;
+  margin-bottom: 1.5rem;
+  font: normal .875rem Helvetica, Arial, sans-serif;
+  border: 1px solid #0066cc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: auto;
+  max-height: 17.5rem;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  padding: .875rem 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: normal 1rem Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  background: #0066cc;
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+  background: #5f95cc;
+}
+
+input[name*="name"] {
+  width: 49%;
+}
+
+input[name="last_name"] {
+  margin-left: 2%;
+}
+
+dl.partial {
+  display: inline-block;
+  padding-right: 1.25rem;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+dl.half {
+  width: 50%;
+}
+
+dl.third {
+  width: 33.3%;
+}
+
+dl.quarter {
+  width: 25%;
+}
+
+dl.last {
+  padding-right: 0;
+}
