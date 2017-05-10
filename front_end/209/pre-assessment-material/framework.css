@@ -1,4 +1,3 @@
-/* Part 1 */
 @import url("whitespace-reset.css");
 
 h1 {
@@ -17,7 +16,6 @@ h4 {
   margin: 0 0 20px 0;
   font-size: 1.5em;
 }
-
 .copy p {
   margin: 0 0 20px 0;
   font-size: 1em;
@@ -50,8 +48,6 @@ h4 {
   margin: 0 auto 20px auto;
   box-sizing: border-box;
 }
-
-/* Part 2 */
 .row:after {
   display: block;
   clear: both;
