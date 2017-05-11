@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>JSConf BR 2014</title>
+    <meta charset="UTF-8" />
+    <style>
+      .blocks-container {
+        margin: 0 auto;
+        max-width: 1080px;
+        text-align: center;
+      }
+      .block {
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          margin: 5px;
+          width: 280px;
+          height: 378px;
+          text-align: center;
+          background: #fff;
+          border: 1px solid #e8e8e8;
+      }
+      .block p {
+          padding: 0 10px;
+      }
+      .block-image {
+          display: block;
+          height: 230px;
+          background-position: center;
+          background-size: 100%;
+      }
+      .block-hover-text {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 10px;
+          color: #FFF;
+          background: rgba(0,0,0,0.9);
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          transition: all 0.5s;
+      }
+      .block-hover-text h2 {
+          margin-top: 4px;
+      }
+      .block-hover-text p {
+          font-size: 13px;
+          line-height: 15px;
+      }
+      .block:hover .block-hover-text,
+      .block:target .block-hover-text { opacity: 1; }
+    </style>
+  </head>
+  <body>
+    <a name="speakers"></a>
+    <div class="section speakers">
+      <h1>Speakers</h1>
+      <div class="blocks-container">
+        <div class="block" id="speaker-gr2m">
+          <a name="speaker-gr2m"></a>
+          <img src="http://placehold.it/280x230" />
+          <h2><a href="https://twitter.com/gr2m" target="_blank">Gregor Martynus</a></h2>
+          <p>Offline First, Made Easy</p>                
+          <div class="block-hover-text">
+            <h2><a href="https://twitter.com/gr2m" target="_blank">Gregor Martynus</a></h2>
+            <p>Gregor is a full stack developer &amp; UX designer, questioning the status quo of what’s possible in the browser today. He created
+            <a href="http://minutes.io">minutes.io</a> and <a href="http://hood.ie/">Hoodie</a>, a JavaScript Library/Architecture that enables you to build<a href="http://offlinefirst.org/">offline-capable</a> applications <a href="http://nobackend.org/">without ever thinking about the backend</a>.</p>
+            <p>He’s a founder at <a href="http://thehoodiefirm.com/">The Hoodie Firm</a>, where he tries to figure out how to fund the “Hoodie” Open
+            Source project without selling his soul. He lives with his wife in Zurich, but sometimes he&#39;s off and on the road to just
+            another <a href="http://africahacktrip.org">AfricaHackTrip</a>.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>      
+  </body>
+</html>
