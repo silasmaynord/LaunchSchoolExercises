@@ -10,16 +10,26 @@ body > div {
 }
 a {
   text-decoration: none;
+  color: #008000;
 }
-h1, h2 {
+h1, h2, h3, h4 {
   font-weight: normal;
-  margin: 10px 0 10px 0;
+  margin: 0 auto;
 }
 h1 {
   font-size: 70px;
 }
 h2 {
   font-size: 32px;
+}
+h3 {
+  font-size: 48px;
+  border-top: 1px solid #eee;
+  padding: 60px 0;
+  text-align: center;
+}
+h4 {
+  font-size: 35px;
 }
 header {
   height: 490px;
@@ -34,6 +44,7 @@ header nav ul {
   margin: 0;
   padding: 0 0 20px 0;
   position: fixed;
+  z-index: 1;
   text-align: center;
   background: #ffffff;
   border-top: 10px solid #f5f5f5;
@@ -62,47 +73,24 @@ header div figure {
 header div img {
   border: 2px solid #000;
 }
-section {
+.tickets {
+  text-align: center;
+  padding-bottom: 80px;
+}
+.tickets a {
+  color: #fff;
+  background-color: #008000;
+  font-weight: 600;
+  padding: 10px 25px;
+}
+.speakers {
   text-align: center;
   margin: 0 30px;
   padding-bottom: 60px;
   border-top: 1px solid #efefef;
-}
-h3 {
-  font-size: 48px;
-  font-weight: normal;
-  display: block;
-}
-.speakers {
   height: 1775px;
 }
-
-main .speakers .block {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  margin: 5px;
-  width: 280px;
-  height: 378px;
-  text-align: center;
-  background: #fff;
-  border: 1px solid #e8e8e8;
-}
-main .speakers .block .back {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  color: #FFF;
-  background: rgba(0,0,0,0.9);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-}
-.container {
+.speakers .blocks-container {
   margin: 0 auto;
   max-width: 1080px;
   text-align: center;
@@ -118,16 +106,7 @@ main .speakers .block .back {
   background: #fff;
   border: 1px solid #e8e8e8;
 }
-.block p {
-  padding: 0 10px;
-}
-.block-image {
-  display: block;
-  height: 230px;
-  background-position: center;
-  background-size: 100%;
-}
-.block-hover-text {
+.back {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -141,19 +120,125 @@ main .speakers .block .back {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-.block-hover-text h4 {
+
+.block p {
+  padding: 0 10px;
+}
+.block-image {
+  display: block;
+  height: 230px;
+  background-position: center;
+  background-size: 100%;
+}
+
+.back h4 {
   margin-top: 4px;
 }
-.block-hover-text p {
+.back p {
   font-size: 13px;
   line-height: 15px;
 }
 
-.block:hover .block-hover-text,
-.block:target .block-hover-text { 
+.block:hover .back,
+.block:target .back { 
   opacity: 1; 
 }
 
-main .schedule table tr {
+.schedule table tr {
   border-top: 1px solid #efefef;
+}
+.call-for-papers .button {
+  color: #fff;
+  font-weight: 600;
+  background-color: #008000;
+  padding: 10px 20px;
+}
+.sponsors, .schedule, .call-for-papers {
+  padding-bottom: 60px;
+}
+.sponsors h4 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 30px;
+}
+.gold-sponsor,
+.silver-sponsor,
+.support-sponsor {
+  margin-right: 50px;
+}
+.gold-sponsor img {
+  width: 300px;
+}
+.silver-sponsor img {
+  width: 240px;
+}
+.support-sponsor img {
+  width: 180px;
+}
+.team {
+  height: 280px;
+  color: #fff;
+  background-size: cover !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4),
+    0 0 30px rgba(0,0,0,0.075);
+}
+
+.dark-background {
+  background: rgba(0,0,0,0.7);
+  padding: 20px 0 40px 0;
+}
+.dark-background h5 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+}
+.dark-background .button {
+  color: #fff;
+  font-weight: 600;
+  background-color: #008000;
+  padding: 10px 20px;
+}
+@media (max-width: 952px) {
+  .speakers {
+    padding-bottom: 850px;
+  }
+}
+
+@media (max-width: 654px) {
+  nav { display: none; }
+
+  figure { top: 0; margin-bottom: 0; height: 300px; }
+  figure h1, figure h2, figure .logo { top: 90px; }
+  figure h1 { font-size: 40px; }
+  figure h2 { font-size: 20px; }
+
+  .speakers { 
+    margin: 0;
+    padding-bottom: 3150px;
+  }
+  .sponsors { margin: 0 10px; }
+
+  .team h1 { font-size: 35px; }
+
+  .schedule-grid tr {
+      position: relative;
+      display: block;
+      border-top: 1px solid #EFEFEF;
+  }
+  .schedule-grid td {
+      display: block;
+      border: none;
+  }
+  .schedule-hour {
+      padding: 20px !important;
+      text-align: right;
+  }
+  .schedule-photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  .schedule-photo img {
+      width: 80px;
+  }
 }
