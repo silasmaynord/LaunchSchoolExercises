@@ -18,6 +18,9 @@ h1 {
 h2 {
   font-size: 20px;
 }
+li + label, {
+  display: block;
+}
 #menu-toggle, body > label {
   display: none;
 }
@@ -25,12 +28,17 @@ h2 {
   background: #464f77;
   color: #868ba2;
   float: left;
-  width: 33.3%;
-  min-width: 300px; 
+  width: 33.3%; 
   text-align: center;
   position: relative;
-  z-index: 9999;
+  z-index: 2;
+  padding-bottom: 125px;
 
+}
+#menu:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 #menu nav {
   padding: 30px 0 200px 0;
@@ -38,7 +46,7 @@ h2 {
 }
 .info {
   padding: 20px 0;
-  margin-left: 40px;
+  margin-left: 10px;
 }
 .info img {
   display: inline-block;
@@ -47,35 +55,34 @@ h2 {
   top: 8px;
 }
 .info .count {
-  left: 28px;
+  right: 31px;
+  top: 13px;
 }
-#all-todos li a {
-  padding-left: 40px;
+.all-todos {
+ color: #fff;
+}
+.completed {
+  margin-left: -20px;
 }
 nav li {
   display: inline-block;
   width: 100%;
 }
-
 nav li a {
   display: inline-block;
   color: #868ba2;
-  min-width: 230px;
-  padding: 20px;
+  padding: 10px 0;
+  width: 100%;
 }
 .active {
   background: #383f5f;
-
-}
-.active .count {
-  background: #148fd5;
   color: #fff;
 }
 .count {
   display: inline-block;
   float: right;
   position: relative;
-  right: 10px;
+  right: 25px;
   border-radius: 20px;
   background: #6b7292;
   padding: 0.5px 6px;
@@ -85,13 +92,9 @@ nav li a {
   content: "";
   display: block;
 }
-input[type="checkbox"]:hover, label:hover {
-  cursor: pointer;
-}
-input[type="checkbox"]:checked + label,
-.complete a {
-  color: #a0a0a0;
-  text-decoration: line-through;
+.active .count {
+  background: #148fd5;
+  color: #fff;
 }
 main:before {
   clear: both;
@@ -105,7 +108,7 @@ main {
   overflow: hidden;
 }
 
-h2 .count {
+h2 + .count {
   font-size: 14px;
   font-weight: normal;
   background: #148fd5;
@@ -114,6 +117,11 @@ h2 .count {
   position: relative;
   left: 10px;
   bottom: 3px;
+}
+h2 + .count {
+  clear: both;
+  content: "";
+  display: block;
 }
 main ul {
   min-width: 150px;
@@ -127,7 +135,7 @@ input {
 .list-item + .list-item {
   border-top: 1px solid #eee;
 }
-.new label {
+.new {
   color: #148fd5;
   cursor: pointer;
 }
@@ -150,12 +158,20 @@ main a {
   font: inherit;
   cursor: pointer;
 }
-/* Style Checked List Items */
-.list-item .complete:checked{
+input[type="checkbox"]:hover, label:hover {
+  cursor: pointer;
+}
+input[type="checkbox"]:checked + label,
+.complete a {
+  color: #a0a0a0;
   text-decoration: line-through;
-  color: ;
-} 
-#new-item {display: none;}
+}
+/***********
+Modal Layout
+***********/
+#new-item {
+  display: none;
+}
 #new-item:not(:checked) + div {
   display: none;
 }
@@ -179,7 +195,9 @@ main a {
   content: "";
   background: rgba(0, 0, 0, .4);
 }
-/* Form Layout */
+/********** 
+Form Layout 
+**********/
 .list-item form label,
 .list-item form label > span {
   margin-bottom: 15px;
@@ -194,7 +212,12 @@ main a {
   margin: 6px 0;
   color: #000;
   font-size: 18px;
-} 
+}
+.list-item form label > span:after {
+  clear: both;
+  content:"";
+  display: block;
+}
 .list-item form p {
     display: inline;
     position: relative;
@@ -245,18 +268,17 @@ textarea {
 #description-label {
   bottom: 3px;
 } 
-
-
-
-
-
-
-/*Media Queries */
-@media (max-width: 900px) {
-  /* Form Adjustments */
+/************
+Media Queries 
+************/
+@media (max-width: 950px) {
+  #new-item:checked + div form {
+    position: fixed;
+    top: 23.5%;
+    left: 40%;
+  }
 }
 @media (max-width: 768px) {
-  /* Menu Icon */
   body > label {
     display: inline-block;  
     cursor: pointer;
@@ -269,27 +291,26 @@ textarea {
   }
   #menu {
     display: none;
-    float: left;
   }
   #menu-toggle:checked + #menu {
     display: block;
-  }
-  body {
-    max-width: 600px;
+    min-width: 225px;
   }
   main {
     padding: 0 22px;
   }
-  
+  #new-item:checked + div form {
+    left: 25%;
+  }
 }
-
-/* 
---Clearfix--
-.group:after {
-  content:"";
-  display: block;
-  clear: both;
+@media (max-width: 650px) {
+  #new-item:checked + div form {
+    transform: scale(.8);
+  }
 }
---Placehold.it--
-url("http://placehold.it/#x#")
-*/ 
+@media (max-width: 540px) {
+  #new-item:checked + div form {
+    left: 10%;
+    transform: scale(.65);
+  }
+}
